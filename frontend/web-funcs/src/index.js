@@ -10,12 +10,15 @@ let initialState = {
 }
 
 let reducer = (prevState=initialState, action) => {
-  console.log('inside my reducer function')
-  console.log('arg1', prevState)
-  console.log('arg2', action)
+  switch(action.type){
+    default:
+      return prevState
+  }
 
 }
 let store = createStore(reducer);
+
+console.log(store)
 
 ReactDOM.render(
   <React.StrictMode>
