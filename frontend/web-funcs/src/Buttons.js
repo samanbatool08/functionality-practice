@@ -1,8 +1,15 @@
 import React from 'react'
 
 class Buttons extends React.Component {
-    render(){
+    
+    state = {   
+        increase: false, 
+        decrease: false
+    }
 
+
+    render(){
+        console.log('working')
         return (
             <div className='buttons'>
                 <h2>buttons</h2>
