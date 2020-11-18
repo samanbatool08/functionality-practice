@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+// import Buttons from './Buttons';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -24,14 +26,14 @@ let reducer = (prevState = initialState, action) => {
 }
 let store = createStore(reducer);
 
-console.log(store.getState())
+// console.log(store.getState())
 
-console.log(store.dispatch({ type: 'INCREMENT' }))
-console.log(store.dispatch({ type: 'INCREMENT' }))
-console.log(store.dispatch({ type: 'INCREMENT' }))
-console.log(store.dispatch({ type: 'DECREMENT' }))
+// console.log(store.dispatch({ type: 'INCREMENT' }))
+// console.log(store.dispatch({ type: 'INCREMENT' }))
+// console.log(store.dispatch({ type: 'INCREMENT' }))
+// console.log(store.dispatch({ type: 'DECREMENT' }))
 
-console.log(store.getState())
+// console.log(store.getState())
 
 
 ReactDOM.render(
