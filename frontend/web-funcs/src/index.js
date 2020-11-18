@@ -5,8 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 
-let reducer = () => {
+let reducer = (arg1, arg2) => {
   console.log('inside my reducer function')
+  console.log('arg1', arg1)
+  console.log('arg2', arg2)
+
 }
 let store = createStore(reducer);
 
