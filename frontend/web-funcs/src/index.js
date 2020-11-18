@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+
+let reducer = () => {
+  console.log('inside my reducer function')
+}
+let store = createStore(reducer);
 
 ReactDOM.render(
   <React.StrictMode>
