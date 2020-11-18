@@ -11,6 +11,10 @@ let initialState = {
 
 let reducer = (prevState=initialState, action) => {
   switch(action.type){
+    case 'DECREMENT':
+      return { number: this.state.number - 1}
+    case 'INCREMENT':
+      return { number: this.state.number + 1}
     default:
       return prevState
   }
@@ -18,10 +22,10 @@ let reducer = (prevState=initialState, action) => {
 }
 let store = createStore(reducer);
 
-console.log(store)
+console.log(store.getState())
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode> 
     <App />
   </React.StrictMode>,
   document.getElementById('root')
