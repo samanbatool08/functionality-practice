@@ -13,7 +13,7 @@ let initialState = {
 let reducer = (prevState = initialState, action) => {
   console.log('in reducer', action.type)
   switch (action.type) {
-    case 'DECREMENT': 
+    case 'DECREMENT':
       return { ...prevState, number: prevState.number - 1 }
     case 'INCREMENT':
       return { ...prevState, number: prevState.number + 1 }
@@ -26,17 +26,19 @@ let store = createStore(reducer);
 
 console.log(store.getState())
 
-console.log(store.dispatch({type: 'INCREMENT'}))
-console.log(store.dispatch({type: 'INCREMENT'}))
-console.log(store.dispatch({type: 'INCREMENT'}))
-console.log(store.dispatch({type: 'DECREMENT'}))
+console.log(store.dispatch({ type: 'INCREMENT' }))
+console.log(store.dispatch({ type: 'INCREMENT' }))
+console.log(store.dispatch({ type: 'INCREMENT' }))
+console.log(store.dispatch({ type: 'DECREMENT' }))
 
 console.log(store.getState())
 
- 
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
