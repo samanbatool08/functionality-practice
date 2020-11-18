@@ -3,8 +3,6 @@ import React from 'react'
 class Buttons extends React.Component {
     
     state = {   
-        increase: false, 
-        decrease: false,
         number: 0
     }
 

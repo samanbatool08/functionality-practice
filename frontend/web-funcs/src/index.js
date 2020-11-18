@@ -5,10 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 
-let reducer = (arg1, arg2) => {
+let initialState = {
+  number: 0
+}
+
+let reducer = (prevState=initialState, action) => {
   console.log('inside my reducer function')
-  console.log('arg1', arg1)
-  console.log('arg2', arg2)
+  console.log('arg1', prevState)
+  console.log('arg2', action)
 
 }
 let store = createStore(reducer);
