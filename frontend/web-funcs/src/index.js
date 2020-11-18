@@ -4,17 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 let initialState = {
   number: 0
 }
 
-let reducer = (prevState=initialState, action) => {
-  switch(action.type){
-    case 'DECREMENT':
-      return { number: this.state.number - 1}
+let reducer = (prevState = initialState, action) => {
+  console.log('in reducer', action.type)
+  switch (action.type) {
+    case 'DECREMENT': 
+      return { ...prevState, number: prevState.number - 1 }
     case 'INCREMENT':
-      return { number: this.state.number + 1}
+      return { ...prevState, number: prevState.number + 1 }
     default:
       return prevState
   }
@@ -24,8 +26,16 @@ let store = createStore(reducer);
 
 console.log(store.getState())
 
+console.log(store.dispatch({type: 'INCREMENT'}))
+console.log(store.dispatch({type: 'INCREMENT'}))
+console.log(store.dispatch({type: 'INCREMENT'}))
+console.log(store.dispatch({type: 'DECREMENT'}))
+
+console.log(store.getState())
+
+ 
 ReactDOM.render(
-  <React.StrictMode> 
+  <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
