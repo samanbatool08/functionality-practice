@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 
 
 class Buttons extends React.Component {
+   
+    dispatch = () => {}
     
-
-    
-
     render(){
         console.log('app props', this.props)
         return (
