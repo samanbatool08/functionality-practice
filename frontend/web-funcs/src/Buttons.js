@@ -10,7 +10,7 @@ class Buttons extends React.Component {
         return (
             <div className='buttons'>
                 <h2>buttons</h2>
-                <button className='buttons__number'></button>
+                <button className='buttons__number'>8</button>
                 <button className='buttons__left' value='left'>Left</button>
                 <button className='buttons__right' value='right'>Right</button>
             </div>
