@@ -7,6 +7,8 @@ function Form() {
                 <label>Name: 
                     <input type='text' name='name' />
                 </label>
+
+                <textarea> Here is some textarea</textarea>
                 <input type='submit' value='Submit' />
             </form>
         </div>
