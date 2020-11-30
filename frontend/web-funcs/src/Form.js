@@ -3,7 +3,12 @@ import React from 'react'
 function Form() {
     return (
         <div>
-            <div>reading form</div>
+            <form>
+                <label>Name: 
+                    <input type='text' name='name' />
+                </label>
+                <input type='submit' value='Submit' />
+            </form>
         </div>
     )
 }
