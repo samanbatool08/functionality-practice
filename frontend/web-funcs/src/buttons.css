@@ -1,0 +1,13 @@
+.buttons > button {
+    color: white;
+    border-color: white;
+    width: 5%;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;  
+} 
